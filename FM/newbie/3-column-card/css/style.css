@@ -1,0 +1,152 @@
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+body {
+  margin: 0;
+  font-family: 'Lexend Deca', sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  background-color: hsl(0, 0%, 95%);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.attribution {
+  padding-bottom: 20px;
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+.main {
+  padding: 88px 0 44px;
+}
+
+.cards {
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  width: 330px;
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+  color: hsla(0, 0%, 100%, 0.75);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.card {
+  padding: 50px 50px 47px;
+}
+
+.card--orange {
+  background-color: hsl(31, 77%, 52%);
+}
+
+.card--orange .button {
+  color: hsl(31, 77%, 52%);
+}
+
+.card--aquamarine {
+  background-color: hsl(184, 100%, 22%);
+}
+
+.card--aquamarine .button {
+  color: hsl(184, 100%, 22%);
+}
+
+.card--dark-green {
+  background-color: hsl(179, 100%, 13%);
+}
+
+.card--dark-green .button {
+  color: hsl(179, 100%, 13%);
+}
+
+.card__image {
+  display: block;
+  margin-bottom: 34px;
+}
+
+.card__title {
+  margin: 0 0 25px;
+  font-family: 'Big Shoulders Display', cursive;
+  font-size: 40px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: hsl(0, 0%, 95%);
+}
+
+.card__text {
+  margin: 0 0 25px;
+  line-height: 25px;
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 146px;
+  height: 48px;
+  font-family: inherit;
+  font-size: 15px;
+  background-color: hsl(0, 0%, 95%);
+  border: 2px solid white;
+  border-radius: 25px;
+}
+
+@media (min-width: 768px) {
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    width: auto;
+    margin-left: 30px;
+    margin-right: 30px;
+    border-radius: 0;
+  }
+}
+
+@media (min-width: 1200px) {
+  .main {
+    padding-top: 170px;
+  }
+
+  .cards {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    max-width: 925px;
+    margin: 0 auto;
+    border-radius: 10px;
+  }
+
+  .card__text {
+    margin-bottom: 82px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .button:hover {
+    cursor: pointer;
+    background-color: transparent;
+  }
+
+  .card--orange .button:hover,
+  .card--aquamarine .button:hover,
+  .card--dark-green .button:hover {
+    color: hsla(0, 0%, 100%, 0.75);
+  }
+}

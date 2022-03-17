@@ -1,0 +1,151 @@
+.cart {
+  position: relative;
+  margin-right: 20px;
+
+  @media (min-width: 768px) {
+    cursor: pointer;
+  }
+
+  @media (min-width: 1210px) {
+    margin-right: 48px;
+  }
+}
+
+.cart__icon {
+  display: block;
+}
+
+.cart__count {
+  position: absolute;
+  top: -5px;
+  right: -10px;
+  display: none;
+  min-width: 20px;
+  padding: 0 5px;
+  font-size: 10px;
+  font-weight: 700;
+  text-align: center;
+  color: white;
+  background-color: var(--color-orange);
+  border-radius: 10px;
+
+  &--nonzero {
+    display: block;
+  }
+}
+
+.cart__wrapper {
+  display: none;
+  position: fixed;
+  top: 75px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 100;
+  width: 362px;
+  min-height: 250px;
+  padding: 20px 24px;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 20px 20px -10px var(--color-gray);
+
+  &--open {
+    display: block;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 62px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: var(--color-gray);
+  }
+
+  @media (min-width: 768px) {
+    top: 85px;
+    right: 24px;
+    transform: translate(0);
+    margin-left: auto;
+  }
+
+  @media (min-width: 1250px) {
+    position: absolute;
+    top: 55px;
+    left: 0;
+    margin-left: 0;
+    transform: translateX(-46%);
+  }
+}
+
+.cart__title {
+  margin: 0;
+  margin-bottom: 30px;
+  font-size: 16px;
+  color: var(--color-dark-gray);
+}
+
+.cart__empty {
+  margin: 0;
+  margin-top: 80px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.cart__content {
+  padding: 5px 0 0;
+
+  .button {
+    margin: 25px 0 0;
+  }
+
+}
+
+.cart__line {
+  margin-top: 12.5px;
+}
+
+.good {
+  display: grid;
+  grid-template-columns: 50px 1fr 15px;
+  height: 50px;
+  column-gap: 15px;
+}
+
+.good__image {
+  grid-area: 1 / 1 / 3 / 2;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.good__name {
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.good__summary {
+  margin: 0;
+  letter-spacing: 0.75px;
+}
+
+// .good__price {}
+
+// .good__quantity {}
+
+.good__total {
+  font-weight: 700;
+  color: var(--color-dark-gray);
+}
+
+.good__trash {
+  grid-area: 1 / 3 / 3 / 4;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}

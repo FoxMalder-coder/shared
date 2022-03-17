@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css">
+  <link rel="stylesheet" href="css/style.css">
+
+  <title>Frontend Mentor | E-commerce product page</title>
+</head>
+
+<body>
+  <header class="page-header container">
+    <img class="logo" src="images/logo.svg" alt="Logo: sneakers" width="140" height="20">
+    <nav class="menu">
+      <div class="menu__overlay"></div>
+      <button class="menu__toggle">
+        <span class="visually-hidden">Open/close menu</span>
+      </button>
+      <ul class="menu__list">
+        <li class="menu__item">
+          <a href="#" class="menu__link">Collections</a>
+        </li>
+        <li class="menu__item">
+          <a href="#" class="menu__link">Men</a>
+        </li>
+        <li class="menu__item">
+          <a href="#" class="menu__link">Women</a>
+        </li>
+        <li class="menu__item">
+          <a href="#" class="menu__link">About</a>
+        </li>
+        <li class="menu__item">
+          <a href="#" class="menu__link">Contact</a>
+        </li>
+      </ul>
+    </nav>
+    <div class="cart">
+      <img class="cart__icon" src="images/icon-cart.svg" alt="Icon: cart" width="22" height="21">
+      <span class="cart__count">0</span>
+      <div class="cart__wrapper">
+        <h2 class="cart__title">Cart</h2>
+        <p class="cart__empty">Your cart is empty.</p>
+        <div class="cart__content"></div>
+      </div>
+    </div>
+    <div class="user">
+      <img src="images/image-avatar.png" alt="User avatar" width="24" height="24">
+    </div>
+  </header>
+  <main class="content">
+    <div class="info">
+      <p class="brand">Sneaker Company</p>
+      <h1 class="title cart-title">Fall Limited Edition Sneakers</h1>
+      <p class="description">These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they’ll withstand everything the weather can offer.</p>
+      <div class="price">
+        <span class="price__current">$125.00</span>
+        <span class="price__discount">50%</span>
+        <span class="price__old">$250.00</span>
+      </div>
+      <input type="number" name="quantity" id="quantity" value="0" min="0" step="1" hidden>
+      <div class="count">
+        <span class="count__decrease">-</span>
+        <span class="count__value">0</span>
+        <span class="count__increase">+</span>
+      </div>
+      <button class="button cart-button">
+        <svg width="22" height="20" xmlns="http://www.w3.org/2000/svg">
+          <path d="M20.925 3.641H3.863L3.61.816A.896.896 0 0 0 2.717 0H.897a.896.896 0 1 0 0 1.792h1l1.031 11.483c.073.828.52 1.726 1.291 2.336C2.83 17.385 4.099 20 6.359 20c1.875 0 3.197-1.87 2.554-3.642h4.905c-.642 1.77.677 3.642 2.555 3.642a2.72 2.72 0 0 0 2.717-2.717 2.72 2.72 0 0 0-2.717-2.717H6.365c-.681 0-1.274-.41-1.53-1.009l14.321-.842a.896.896 0 0 0 .817-.677l1.821-7.283a.897.897 0 0 0-.87-1.114ZM6.358 18.208a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm10.015 0a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm2.021-7.243-13.8.81-.57-6.341h15.753l-1.383 5.53Z" fill="currentColor" fill-rule="nonzero" />
+        </svg>
+        Add to cart</button>
+    </div>
+
+    <div class="swiper gallery">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img class="gallery__photo" src="images/image-product-1.jpg" alt="-" width="375" height="300">
+        </div>
+        <div class="swiper-slide">
+          <img class="gallery__photo" src="images/image-product-2.jpg" alt="-" width="375" height="300">
+        </div>
+        <div class="swiper-slide">
+          <img class="gallery__photo" src="images/image-product-3.jpg" alt="-" width="375" height="300">
+        </div>
+        <div class="swiper-slide">
+          <img class="gallery__photo" src="images/image-product-4.jpg" alt="-" width="375" height="300">
+        </div>
+      </div>
+
+      <div class="arrow arrow--prev gallery__button-prev"></div>
+      <div class="arrow arrow--next gallery__button-next"></div>
+    </div>
+
+    <div class="swiper thumbs">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img class="thumb cart-thumb" src="images/image-product-1-thumbnail.jpg" alt="-" width="88" height="88">
+        </div>
+        <div class="swiper-slide">
+          <img class="thumb" src="images/image-product-2-thumbnail.jpg" alt="-" width="88" height="88">
+        </div>
+        <div class="swiper-slide">
+          <img class="thumb" src="images/image-product-3-thumbnail.jpg" alt="-" width="88" height="88">
+        </div>
+        <div class="swiper-slide">
+          <img class="thumb" src="images/image-product-4-thumbnail.jpg" alt="-" width="88" height="88">
+        </div>
+      </div>
+    </div>
+
+    <div class="modal-gallery" hidden>
+      <div class="modal-gallery__overlay"></div>
+      <div class="modal-gallery__content">
+        <button class="modal-gallery__close">
+          <span class="visually-hidden">Close lightbox</span>
+        </button>
+      </div>
+    </div>
+
+    <template id="basket">
+      <div class="cart__line good">
+        <img class="good__image" src="images/image-product-4-thumbnail.jpg" alt="-">
+        <p class="good__name">Item's name</p>
+        <p class="good__summary">
+          <output class="good__price">$0.00</output>
+          x <output class="good__quantity">0</output>
+          <output class="good__total">$0.00</output>
+        </p>
+        <button class="good__trash">
+          <img src="images/icon-delete.svg" alt="Icon: trash">
+        </button>
+      </div>
+      <button class="button">Checkout</button>
+    </template>
+  </main>
+
+  <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">Irina Lagutina</a>.
+  </footer>
+
+  <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+
+</html>

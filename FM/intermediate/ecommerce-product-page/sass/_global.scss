@@ -1,0 +1,70 @@
+:root {
+  --color-orange: hsl(26, 100%, 55%);
+  --color-light-orange: hsl(25, 100%, 94%);
+  --color-dark-gray: hsl(220, 13%, 13%);
+  --color-middle-gray: hsl(219, 9%, 45%);
+  --color-gray: hsl(220, 14%, 75%);
+  --color-light-gray: hsl(223, 64%, 98%);
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+body {
+  margin: 0;
+  font-family: 'Kumbh Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--color-middle-gray);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  display: block;
+}
+
+.container {
+  padding-left: 24px;
+  padding-right: 24px;
+
+  @media (min-width: 768px) {
+    padding-left: 35px;
+    padding-right: 35px;
+  }
+
+  @media (min-width: 1210px) {
+    padding-left: 50px;
+    padding-right: 50px;
+    max-width: 1210px;
+    margin: 0 auto;
+  }
+}
+
+.content {
+  display: grid;
+
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+    max-width: 1090px;
+    margin: 0 auto;
+    padding: 90px 35px 150px;
+  }
+
+  @media (min-width: 1210px) {
+    column-gap: 125px;
+  }
+}
