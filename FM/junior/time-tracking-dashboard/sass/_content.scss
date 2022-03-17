@@ -1,0 +1,114 @@
+.card-data {
+  position: relative;
+  margin-top: 38px;
+  background-color: var(--color-dark-blue);
+  border-radius: 15px;
+
+  &::before {
+    position: absolute;
+    top: -38px;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 60px;
+    border-radius: 15px;
+    content: "";
+
+    @media (min-width: 1200px) {
+      top: -45px;
+      height: 65px;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    margin-top: 45px;
+
+    &:hover {
+      background-color: var(--color-middle-blue);
+      cursor: pointer;
+    }
+  }
+}
+
+.card-data--work::before {
+  background: var(--color-orange) url("../images/icon-work.svg") 92.5% 50% / auto 130% no-repeat;
+}
+
+.card-data--play::before {
+  background: var(--color-cyan) url("../images/icon-play.svg") 92.5% 50% / auto 130% no-repeat;
+}
+
+.card-data--study::before {
+  background: var(--color-magenta) url("../images/icon-study.svg") 92.5% 50% / auto 130% no-repeat;
+}
+
+.card-data--exercise::before {
+  background: var(--color-green) url("../images/icon-exercise.svg") 92.5% 50% no-repeat;
+}
+
+.card-data--social::before {
+  background: var(--color-violet) url("../images/icon-social.svg") 92.5% 50% no-repeat;
+}
+
+.card-data--self-care::before {
+  background: var(--color-yellow) url("../images/icon-self-care.svg") 92.5% 50% no-repeat;
+}
+
+.data {
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  gap: 16px;
+  padding: 30px 25px 37px;
+  font-weight: 400;
+
+  @media (min-width: 1200px) {
+    grid-template-columns: 1fr min-content;
+    padding: 30px 30px;
+  }
+}
+
+.data__title {
+  margin: 0;
+  font-size: 17px;
+  font-weight: 500;
+}
+
+.data__link {
+  justify-self: end;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 28px;
+  line-height: 0;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-decoration: none;
+  color: var(--color-light);
+  cursor: pointer;
+}
+
+.data__current {
+  align-self: center;
+  font-size: 32px;
+  line-height: 0.5;
+  font-weight: 300;
+
+  @media (min-width: 1200px) {
+    align-self: end;
+    grid-column: 1 / -1;
+    margin-top: 10px;
+    font-size: 56px;
+    line-height: 1;
+  }
+}
+
+.data__prev {
+  justify-self: end;
+  font-size: 15px;
+  text-align: right;
+  color: var(--color-light);
+
+  @media (min-width: 1200px) {
+    justify-self: start;
+    grid-column: 1 / -1;
+    text-align: left;
+  }
+}

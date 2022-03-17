@@ -1,0 +1,53 @@
+:root {
+  --color-main-blue: hsl(246, 80%, 60%);
+  --color-orange: hsl(15, 100%, 70%);
+  --color-cyan: hsl(195, 74%, 62%);
+  --color-magenta: hsl(348, 100%, 68%);
+  --color-green: hsl(145, 58%, 55%);
+  --color-violet: hsl(264, 64%, 52%);
+  --color-yellow: hsl(43, 84%, 65%);
+
+  --color-middle-blue: hsl(236, 41%, 34%);
+  --color-light: hsl(236, 100%, 87%);
+  --color-blue: hsl(235, 45%, 61%);
+  --color-dark-blue: hsl(235, 46%, 20%);
+  --color-dark: hsl(226, 43%, 10%);
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+body {
+  margin: 0;
+  font-family: 'Rubik', sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+  color: white;
+  background-color: var(--color-dark);
+
+  @media (min-width: 1270px) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 100vh;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  display: block;
+}
