@@ -1,0 +1,53 @@
+:root {
+  --color-light: #f7f2f7; // comment text
+  --color-middle: #937b92; //intro additional text
+  --color-acsent: #ee68a4;
+  --color-dark: #502050;
+  --color-star: #ee9946;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+body {
+  min-height: 100%;
+  margin: 0;
+  font-family: 'Spartan', sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  background: url("../images/bg-pattern-top-mobile.svg") 0 0 no-repeat, url("../images/bg-pattern-bottom-mobile.svg") 100% 100% no-repeat;
+  background-attachment: fixed;
+
+  @media (min-width: 992px) {
+    background-image: url("../images/bg-pattern-top-desktop.svg"), url("../images/bg-pattern-bottom-desktop.svg");
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.content {
+  margin: 0 auto;
+  padding: 80px 25px 50px;
+
+  @media (min-width: 768px) {
+    max-width: 1210px;
+    padding-right: 50px;
+    padding-left: 50px;
+  }
+
+  @media (min-width: 1200px) {
+    padding-top: 130px;
+  }
+}

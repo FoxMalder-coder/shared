@@ -1,0 +1,78 @@
+@keyframes shine {
+  0% {
+    color: var(--color-acsent);
+  }
+
+  50% {
+    color: var(--color-dark);
+  }
+
+  100% {
+    color: var(--color-acsent);
+  }
+}
+
+.rating {
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 540px;
+
+  @media (min-width: 1200px) {
+    align-self: start;
+    align-items: center;
+    margin-top: 15px;
+  }
+}
+
+.rating__line {
+  padding: 6px 15px 17px;
+  text-align: center;
+  background-color: var(--color-light);
+  border-radius: 10px;
+
+  &:not(:last-of-type) {
+    margin-bottom: 16px;
+  }
+
+  &:first-of-type {
+    @media (min-width: 1200px) {
+      align-self: start;
+    }
+  }
+
+  &:last-of-type {
+    @media (min-width: 1200px) {
+      align-self: end;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    width: 445px;
+    padding: 14px 30px;
+  }
+}
+
+.rating__stars {
+  font-size: 28px;
+  line-height: 40px;
+  letter-spacing: 2px;
+  color: var(--color-star);
+  animation: shine 3s 5s infinite linear;
+
+  @media (min-width: 1200px) {
+    line-height: 28px;
+    margin-right: 25px;
+  }
+}
+
+.rating__sign {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--color-dark);
+}

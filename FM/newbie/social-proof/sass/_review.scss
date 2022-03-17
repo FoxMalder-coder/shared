@@ -1,0 +1,77 @@
+.review {}
+
+.review__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 -15px;
+  padding: 0;
+  list-style: none;
+  font-size: 13px;
+}
+
+.review__item {
+  flex-grow: 0;
+  width: 100%;
+  max-width: 350px;
+  min-height: 235px;
+  margin-right: 15px;
+  margin-left: 15px;
+  padding: 41px 28px 33px;
+  background-color: var(--color-dark);
+  border-radius: 10px;
+  transition: transform 0.5s linear;
+
+  &:not(:last-of-type):not(:first-of-type) {
+    margin-top: 16px;
+    margin-bottom: -16px;
+  }
+
+  &:last-of-type {
+    margin-top: 32px;
+    margin-bottom: -32px;
+  }
+
+  &:hover {
+    @media (min-width: 1440px) {
+      transform: scale(105%);
+      cursor: pointer;
+    }
+  }
+}
+
+.review__author {
+  display: grid;
+  grid-template-columns: min-content 1fr;
+  grid-gap: 0 25px;
+  margin-bottom: 30px;
+}
+
+.review__author-image {
+  grid-area: 1 / 1 / span 2 / span 1;
+  align-self: center;
+  display: block;
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.review__author-name {
+  margin: 0;
+  font-weight: 700;
+  color: white;
+}
+
+.review__author-status {
+  margin: 0;
+  font-weight: 400;
+  color: var(--color-acsent);
+}
+
+.review__text {
+  margin: 0;
+  line-height: 21px;
+  font-weight: 400;
+  color: var(--color-light);
+}
