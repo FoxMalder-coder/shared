@@ -1,0 +1,177 @@
+.content {
+  width: 100%;
+  max-width: 923px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 16px 30px;
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+    align-items: end;
+  }
+}
+
+.action {
+  width: 100%;
+  max-width: 350px;
+  height: 200px;
+  padding: 40px;
+  background-color: var(--color-dark-blue);
+  border-radius: 10px;
+  border-top-right-radius: 100px;
+}
+
+.logo {
+  margin-bottom: 32px;
+}
+
+.action__list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.action__item {
+  &:not(:last-of-type) {
+    margin-right: 16px;
+  }
+}
+
+.action__link {
+  display: block;
+  height: 48px;
+  width: 48px;
+  padding: 12px;
+  color: var(--color-blue);
+  background-color: var(--color-dark);
+  border-radius: 10px;
+
+  &:hover {
+    @media (min-width: 1440px) {
+      color: white;
+      transition: all 0.3s linear;
+      background-color: var(--color-blue);
+    }
+  }
+}
+
+.action__icon {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.data {
+  position: relative;
+  width: 100%;
+  height: 160px;
+  padding: 33px;
+  text-align: center;
+  background-color: var(--color-dark-blue);
+  border-radius: 10px;
+
+  @media (min-width: 768px) {
+    height: 155px;
+    padding: 40px;
+  }
+
+}
+
+.data__header {
+  margin: 0 0 18px;
+
+  @media (min-width: 768px) {
+    text-align: left;
+  }
+}
+
+.data__used {
+  font-weight: 700;
+}
+
+.progress {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+// Стилизация элемента прогресс
+// .progress__bar {
+//   position: relative;
+//   width: 100%;
+//   height: 20px;
+//   margin-bottom: 8px;
+//   background-color: var(--color-dark);
+//   border: 3px solid var(--color-dark);
+//   border-radius: 10px;
+
+//   &::-webkit-progress-bar {
+//     background-color: var(--color-dark);
+//   }
+
+//   &::-webkit-progress-value {
+//     background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10' fill='white'%3E%3Ccircle cx='5' cy='5' r='5'/%3E%3C/svg%3E") 99% 50% no-repeat, linear-gradient(to right, var(--color-grad-start), var(--color-grad-end));
+//     border-radius: 10px;
+//   }
+
+//   &::-moz-progress-bar {
+//     background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10' fill='white'%3E%3Ccircle cx='5' cy='5' r='5'/%3E%3C/svg%3E") 99% 50% no-repeat, linear-gradient(to right, var(--color-grad-start), var(--color-grad-end));
+//     border-radius: 10px;
+//   }
+// }
+
+.progress__bar {
+  // width: 100%;
+  margin-bottom: 8px;
+}
+
+.progress__sign {
+  font-size: 12px;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.data__result {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 180px;
+  height: 72px;
+  margin: 0 auto -35px;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--color-gray);
+  background-color: white;
+  border-radius: 10px;
+
+  &::after {
+    @media (min-width: 768px) {
+      position: absolute;
+      bottom: -20px;
+      right: 0;
+      width: 0;
+      height: 0;
+      border: 10px solid transparent;
+      border-top: 10px solid white;
+      border-right: 10px solid white;
+      content: "";
+    }
+  }
+
+  @media (min-width: 768px) {
+    position: absolute;
+    top: -45px;
+    right: 42px;
+    margin: 0;
+    border-bottom-right-radius: 0;
+  }
+}
+
+.data__reserved {
+  font-size: 40px;
+  margin-right: 8px;
+  color: var(--color-dark-blue);
+}

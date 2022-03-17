@@ -1,0 +1,318 @@
+:root {
+  --color-grad-start: hsl(6, 100%, 80%);
+  --color-grad-end: hsl(335, 100%, 65%);
+  --color-light: hsl(243, 100%, 93%);
+  --color-gray: hsl(229, 7%, 55%);
+  --color-blue: hsl(230, 59%, 63%);
+  --color-dark-blue: hsl(228, 56%, 26%);
+  --color-dark: hsl(229, 57%, 11%);
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+          clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0;
+  min-height: 100vh;
+  padding: 0 25px;
+  font-family: 'Raleway', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: white;
+  background-color: var(--color-dark);
+  background-image: url("../images/bg-mobile.png");
+  background-position: 50% 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+@media (min-width: 1440px) {
+  body {
+    background-image: url("../images/bg-desktop.png");
+    background-position: 0 100%;
+    background-size: 100%;
+  }
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+img {
+  display: block;
+}
+
+.content {
+  width: 100%;
+  max-width: 923px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 16px 30px;
+}
+
+@media (min-width: 768px) {
+  .content {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: end;
+  }
+}
+
+.action {
+  width: 100%;
+  max-width: 350px;
+  height: 200px;
+  padding: 40px;
+  background-color: var(--color-dark-blue);
+  border-radius: 10px;
+  border-top-right-radius: 100px;
+}
+
+.logo {
+  margin-bottom: 32px;
+}
+
+.action__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.action__item:not(:last-of-type) {
+  margin-right: 16px;
+}
+
+.action__link {
+  display: block;
+  height: 48px;
+  width: 48px;
+  padding: 12px;
+  color: var(--color-blue);
+  background-color: var(--color-dark);
+  border-radius: 10px;
+}
+
+@media (min-width: 1440px) {
+  .action__link:hover {
+    color: white;
+    -webkit-transition: all 0.3s linear;
+    -o-transition: all 0.3s linear;
+    transition: all 0.3s linear;
+    background-color: var(--color-blue);
+  }
+}
+
+.action__icon {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.data {
+  position: relative;
+  width: 100%;
+  height: 160px;
+  padding: 33px;
+  text-align: center;
+  background-color: var(--color-dark-blue);
+  border-radius: 10px;
+}
+
+@media (min-width: 768px) {
+  .data {
+    height: 155px;
+    padding: 40px;
+  }
+}
+
+.data__header {
+  margin: 0 0 18px;
+}
+
+@media (min-width: 768px) {
+  .data__header {
+    text-align: left;
+  }
+}
+
+.data__used {
+  font-weight: 700;
+}
+
+.progress {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.progress__bar {
+  margin-bottom: 8px;
+}
+
+.progress__sign {
+  font-size: 12px;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.data__result {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  min-width: 180px;
+  height: 72px;
+  margin: 0 auto -35px;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--color-gray);
+  background-color: white;
+  border-radius: 10px;
+}
+
+@media (min-width: 768px) {
+  .data__result::after {
+    position: absolute;
+    bottom: -20px;
+    right: 0;
+    width: 0;
+    height: 0;
+    border: 10px solid transparent;
+    border-top: 10px solid white;
+    border-right: 10px solid white;
+    content: "";
+  }
+}
+
+@media (min-width: 768px) {
+  .data__result {
+    position: absolute;
+    top: -45px;
+    right: 42px;
+    margin: 0;
+    border-bottom-right-radius: 0;
+  }
+}
+
+.data__reserved {
+  font-size: 40px;
+  margin-right: 8px;
+  color: var(--color-dark-blue);
+}
+
+input[type=range] {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 20px;
+  background-color: var(--color-dark);
+  border: 3px solid var(--color-dark);
+  border-radius: 10px;
+}
+
+input[type=range]:focus {
+  outline: none;
+  /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
+}
+
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 10px;
+  width: 10px;
+  margin-top: 2px;
+  background-color: white;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+  -webkit-appearance: none;
+  width: 80%;
+  height: 14px;
+  background: -webkit-gradient(linear, left top, right top, from(var(--color-grad-start)), to(var(--color-grad-end)));
+  background: -webkit-linear-gradient(left, var(--color-grad-start), var(--color-grad-end));
+  background: linear-gradient(to right, var(--color-grad-start), var(--color-grad-end));
+  border-radius: 10px;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+/* All the same stuff for Firefox */
+input[type=range]::-moz-range-thumb {
+  height: 10px;
+  width: 10px;
+  background-color: white;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+}
+
+input[type=range]::-moz-range-progress {
+  width: 100%;
+  height: 14px;
+  background: linear-gradient(to right, var(--color-grad-start), var(--color-grad-end));
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.attribution {
+  position: absolute;
+  width: 100%;
+  bottom: 20px;
+  font-size: 11px;
+  text-align: center;
+  color: white;
+}
+
+.attribution a {
+  color: var(--color-gray);
+}
+/*# sourceMappingURL=style.css.map */
