@@ -1,0 +1,189 @@
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: hsl(217, 54%, 11%);
+  font-family: 'Outfit', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.attribution {
+  position: absolute;
+  left: 0;
+  bottom: 20px;
+  width: 100%;
+  font-size: 11px;
+  text-align: center;
+  color: white;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+.card-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.card {
+  width: 330px;
+  padding: 24px;
+  background-color: hsl(216, 50%, 16%);
+  border-radius: 15px;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.35);
+}
+
+.card__image-wrapper {
+  position: relative;
+  margin-bottom: 22px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.card__image {
+  display: block;
+  width: 100%;
+}
+
+.card__title {
+  margin: 0 0 16px;
+  font-size: 22px;
+  font-weight: 600;
+  text-decoration: none;
+  color: white;
+}
+
+.card__title h2 {
+  font-size: inherit;
+}
+
+.card__text {
+  margin: 0 0 16px;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 300;
+  color: hsl(215, 51%, 70%);
+}
+
+.card__rate {
+  padding-left: 18px;
+  font-size: 16px;
+  font-weight: 600;
+  color: hsl(178, 100%, 50%);
+  background: url("../images/icon-ethereum.svg") left center no-repeat;
+}
+
+.card__auction {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.card__timer {
+  padding-left: 22px;
+  font-size: 16px;
+  color: hsl(215, 51%, 70%);
+  background: url("../images/icon-clock.svg") left center no-repeat;
+}
+
+.author {
+  display: flex;
+  align-items: center;
+}
+
+.author__photo {
+  display: block;
+  width: 33px;
+  height: 33px;
+  margin-right: 17px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 1px solid white;
+}
+
+.author__name {
+  margin: 0;
+  font-size: 15px;
+  color: hsl(215, 51%, 70%);
+}
+
+.author__link {
+  color: white;
+  text-decoration: none;
+}
+
+hr {
+  width: 100%;
+  height: 1px;
+  margin: 0 0 16px;
+  background-color: hsl(215, 32%, 27%);
+  border: none;
+}
+
+@media (min-width: 450px) {
+  .card {
+    width: 350px;
+    padding-bottom: 35px;
+  }
+
+  .card__image-wrapper {
+    margin-bottom: 27px;
+  }
+
+  .card__text {
+    font-size: 18px;
+    margin-bottom: 24px;
+  }
+
+  .card__auction {
+    margin-bottom: 23px;
+  }
+
+  .author__name {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 1440px) {
+
+  .card__title:hover,
+  .author__link:hover {
+    color: rgb(0, 255, 247);
+    cursor: pointer;
+  }
+
+  .card__image-wrapper:hover::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "";
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    background-color: rgba(0, 255, 247, 0.5);
+    background-image: url("../images/icon-view.svg");
+    background-position: center;
+    background-size: 44px;
+    background-repeat: no-repeat;
+    cursor: pointer;
+  }
+}
