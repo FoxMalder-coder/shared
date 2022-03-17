@@ -1,0 +1,39 @@
+:root {
+  --color-bg: hsl(185, 41%, 84%);
+  --color-light-gray: hsl(180, 37%, 97%);
+  --color-middle-gray: hsl(186, 14%, 56%);
+  --color-dark-gray: hsl(186, 14%, 43%);
+  --color-light-main: hsl(173, 61%, 77%);
+  --color-main: hsl(172, 67%, 45%);
+  --color-dark: hsl(183, 100%, 15%);
+  --color-orange: hsl(10, 32%, 58%);
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+body {
+  margin: 0;
+  font-family: 'Space Mono', monospace;
+  font-size: 24px;
+  font-weight: 400;
+  background: var(--color-bg);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  display: block;
+}

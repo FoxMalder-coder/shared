@@ -1,0 +1,40 @@
+.container {
+  padding: 50px 0;
+
+  @media (min-width: 768px) {
+    padding: 158px 50px 50px;
+  }
+
+  @media (min-width: 1200px) {
+    padding-top: 50px;
+  }
+}
+
+.logo {
+  margin: 0 auto 38px;
+
+  @media (min-width: 768px) {
+    margin-bottom: 90px;
+  }
+}
+
+.layout {
+  display: grid;
+  gap: 35px;
+  width: 100%;
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 34px 24px;
+  background-color: white;
+  border-radius: 25px;
+  box-shadow: 0 10px 25px -15px var(--color-main);
+
+  @media (min-width: 768px) {
+    grid-template-columns: 1fr 48.75%;
+    align-items: start;
+    gap: 20px 40px;
+    max-width: 920px;
+    padding: 32px;
+    padding-left: 40px;
+  }
+}

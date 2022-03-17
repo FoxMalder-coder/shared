@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+
+  <title>Frontend Mentor | Tip calculator app</title>
+</head>
+
+<body>
+  <main class="container">
+    <h1 class="visually-hidden">Tip calculator</h1>
+    <img class="logo" src="images/logo.svg" width="90" alt="Logo: splitter">
+    <form action="#" class="layout">
+      <fieldset class="fieldset">
+        <legend class="legend">Bill</legend>
+        <input class="input input--bill" type="text" placeholder="0">
+      </fieldset>
+
+      <fieldset class="fieldset fieldset--radio">
+        <legend class="legend">Select Tip %</legend>
+        <input class="input-radio" type="radio" name="tips" id="r1" value="0.05">
+        <label for="r1" class="label">5%</label>
+        <input class="input-radio" type="radio" name="tips" id="r2" value="0.10">
+        <label for="r2" class="label">10%</label>
+        <input class="input-radio" type="radio" name="tips" id="r3" value="0.15">
+        <label for="r3" class="label">15%</label>
+        <input class="input-radio" type="radio" name="tips" id="r4" value="0.25">
+        <label for="r4" class="label">25%</label>
+        <input class="input-radio" type="radio" name="tips" id="r5" value="0.50">
+        <label for="r5" class="label">50%</label>
+        <input class="input input--custom" type="text" placeholder="Custom">
+      </fieldset>
+
+      <fieldset class="fieldset">
+        <legend class="legend">Number of People</legend>
+        <input class="input input--person" type="text" placeholder="0" pattern="[1-9]\d*" title="Any positive number">
+      </fieldset>
+
+      <fieldset class="total">
+        <p class="text">Tip Amount<span class="text-small">/ person</span></p>
+        <output class="total-tips">$0.00</output>
+        <p class="text">Total<span class="text-small">/ person</span></p>
+        <output class="total-amount">$0.00</output>
+        <button class="button" type="reset" disabled>Reset</button>
+      </fieldset>
+    </form>
+
+    <script src="js/script.js"></script>
+  </main>
+
+  <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">Irina Lagutina</a>.
+  </footer>
+</body>
+
+</html>
