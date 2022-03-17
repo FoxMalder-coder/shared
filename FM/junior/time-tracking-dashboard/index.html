@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+
+  <title>Frontend Mentor | Time tracking dashboard</title>
+</head>
+
+<body>
+  <main class="layout container">
+    <h1 class="visually-hidden">Jeremy Robson's time tracking dashboard</h1>
+    <div class="control">
+      <div class="control__header">
+        <img class="user-photo" src="images/image-jeremy.png" width="70" alt="Photo: Jeremy Robson">
+        <h2 class="control__title">Report for <span>Jeremy Robson</span></h2>
+      </div>
+      <ul class="control__switch">
+        <li class="control__position" data-tabs-handler="day"><button>Daily</button></li>
+        <li class="control__position control__position--active" data-tabs-handler="week">
+          <button>Weekly</button>
+        </li>
+        <li class="control__position" data-tabs-handler="month"><button>Monthly</button></li>
+      </ul>
+    </div>
+
+    <div class="card-data card-data--work">
+      <div class="data">
+        <h2 class="data__title">Work</h2>
+        <a href="#" class="data__link" aria-label="More about">...</a>
+        <span class="data__current" hidden>
+          <span data-tabs-field="day">0</span>hrs
+        </span>
+        <span class="data__prev" hidden>
+          Yesterday - <span data-tabs-field="day">0</span>hrs
+        </span>
+        <span class="data__current">
+          <span data-tabs-field="week">0</span>hrs
+        </span>
+        <span class="data__prev">
+          Last Week - <span data-tabs-field="week">0</span>hrs
+        </span>
+        <span class="data__current" hidden>
+          <span data-tabs-field="month">0</span>hrs
+        </span>
+        <span class="data__prev" hidden>
+          Last Month - <span data-tabs-field="month">0</span>hrs
+        </span>
+      </div>
+    </div>
+
+    <div class="card-data card-data--play">
+      <div class="data">
+        <h2 class="data__title">Play</h2>
+        <a href="#" class="data__link" aria-label="More about">...</a>
+        <span class="data__current" hidden>
+          <span data-tabs-field="day">0</span>hrs
+        </span>
+        <span class="data__prev" hidden>
+          Yesterday - <span data-tabs-field="day">0</span>hrs
+        </span>
+        <span class="data__current">
+          <span data-tabs-field="week">0</span>hrs
+        </span>
+        <span class="data__prev">
+          Last Week - <span data-tabs-field="week">0</span>hrs
+        </span>
+        <span class="data__current" hidden>
+          <span data-tabs-field="month">0</span>hrs
+        </span>
+        <span class="data__prev" hidden>
+          Last Month - <span data-tabs-field="month">0</span>hrs
+        </span>
+      </div>
+    </div>
+
+    <div class="card-data card-data--study">
+      <div class="data">
+        <h2 class="data__title">Study</h2>
+        <a href="#" class="data__link" aria-label="More about">...</a>
+        <span class="data__current" hidden>
+          <span data-tabs-field="day">0</span>hrs
+        </span>
+        <span class="data__prev" hidden>
+          Yesterday - <span data-tabs-field="day">0</span>hrs
+        </span>
+        <span class="data__current">
+          <span data-tabs-field="week">0</span>hrs
+        </span>
+        <span class="data__prev">
+          Last Week - <span data-tabs-field="week">0</span>hrs
+        </span>
+        <span class="data__current" hidden>
+          <span data-tabs-field="month">0</span>hrs
+        </span>
+        <span class="data__prev" hidden>
+          Last Month - <span data-tabs-field="month">0</span>hrs
+        </span>
+      </div>
+    </div>
+
+    <div class="card-data card-data--exercise">
+      <div class="data">
+        <h2 class="data__title">Exercise</h2>
+        <a href="#" class="data__link" aria-label="More about">...</a>
+        <span class="data__current" hidden>
+          <span data-tabs-field="day">0</span>hrs
+        </span>
+        <span class="data__prev" hidden>
+          Yesterday - <span data-tabs-field="day">0</span>hrs
+        </span>
+        <span class="data__current">
+          <span data-tabs-field="week">0</span>hrs
+        </span>
+        <span class="data__prev">
+          Last Week - <span data-tabs-field="week">0</span>hrs
+        </span>
+        <span class="data__current" hidden>
+          <span data-tabs-field="month">0</span>hrs
+        </span>
+        <span class="data__prev" hidden>
+          Last Month - <span data-tabs-field="month">0</span>hrs
+        </span>
+      </div>
+    </div>
+
+    <div class="card-data card-data--social">
+      <div class="data">
+        <h2 class="data__title">Social</h2>
+        <a href="#" class="data__link" aria-label="More about">...</a>
+        <span class="data__current" hidden>
+          <span data-tabs-field="day">0</span>hrs
+        </span>
+        <span class="data__prev" hidden>
+          Yesterday - <span data-tabs-field="day">0</span>hrs
+        </span>
+        <span class="data__current">
+          <span data-tabs-field="week">0</span>hrs
+        </span>
+        <span class="data__prev">
+          Last Week - <span data-tabs-field="week">0</span>hrs
+        </span>
+        <span class="data__current" hidden>
+          <span data-tabs-field="month">0</span>hrs
+        </span>
+        <span class="data__prev" hidden>
+          Last Month - <span data-tabs-field="month">0</span>hrs
+        </span>
+      </div>
+    </div>
+
+    <div class="card-data card-data--self-care">
+      <div class="data">
+        <h2 class="data__title">Self Care</h2>
+        <a href="#" class="data__link" aria-label="More about">...</a>
+        <span class="data__current" hidden>
+          <span data-tabs-field="day">0</span>hrs
+        </span>
+        <span class="data__prev" hidden>
+          Yesterday - <span data-tabs-field="day">0</span>hrs
+        </span>
+        <span class="data__current">
+          <span data-tabs-field="week">0</span>hrs
+        </span>
+        <span class="data__prev">
+          Last Week - <span data-tabs-field="week">0</span>hrs
+        </span>
+        <span class="data__current" hidden>
+          <span data-tabs-field="month">0</span>hrs
+        </span>
+        <span class="data__prev" hidden>
+          Last Month - <span data-tabs-field="month">0</span>hrs
+        </span>
+      </div>
+    </div>
+  </main>
+
+  <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">Irina Lagutina</a>.
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+
+</html>
