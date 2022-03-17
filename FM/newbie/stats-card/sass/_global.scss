@@ -1,0 +1,31 @@
+:root {
+  --color-violet: hsl(277, 64%, 61%);
+  --color-blue: hsl(244, 38%, 16%);
+  --color-dark-blue: hsl(233, 47%, 7%);
+  --color-opacity-white: hsla(0, 0%, 100%, 0.75);
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+body {
+  margin: 0;
+  background-color: var(--color-dark-blue);
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+* {
+  box-sizing: border-box;
+}
