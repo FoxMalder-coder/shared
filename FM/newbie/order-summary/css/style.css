@@ -1,0 +1,221 @@
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 375px;
+  margin: 0;
+  text-align: center;
+  background: hsl(225, 100%, 94%) url("../images/pattern-background-mobile.svg") top center / contain no-repeat;
+  font-family: 'Red Hat Display', sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+
+.card-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  padding: 0 22.5px;
+}
+
+.card {
+  width: 100%;
+  max-width: 450px;
+  background-color: #fff;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px -30px hsl(245, 75%, 52%);
+}
+
+.card__image {
+  display: block;
+  width: 100%;
+}
+
+.card__info {
+  padding: 30px 25px 23px;
+}
+
+.card__title {
+  margin: 0 0 16px;
+  font-size: 22px;
+  font-weight: 900;
+  color: hsl(223, 47%, 23%);
+}
+
+.card__text {
+  max-width: 90%;
+  margin: 0 auto 22px;
+  font-size: 15px;
+  line-height: 175%;
+  color: hsl(224, 23%, 55%);
+  font-weight: 500;
+}
+
+.card__content {
+  margin-bottom: 22px;
+}
+
+.small-card {
+  display: grid;
+  grid-template-columns: 45px 1fr min-content;
+  grid-template-areas:
+    'icon title button'
+    'icon price button';
+  grid-gap: 0 24px;
+  padding: 17px 15px;
+  text-align: left;
+  background-color: hsl(225, 100%, 98%);
+  border-radius: 10px;
+}
+
+.small-card__icon {
+  grid-area: icon;
+}
+
+.small-card__title {
+  grid-area: title;
+  margin: 0;
+  padding: 0;
+  font-size: 15px;
+  font-weight: 700;
+  color: hsl(223, 47%, 23%);
+}
+
+.small-card__price {
+  grid-area: price;
+  padding: 0;
+  color: hsl(224, 23%, 55%);
+}
+
+.button-addition {
+  grid-area: button;
+  padding: 0;
+  font-family: inherit;
+  font-weight: 700;
+  text-decoration: underline;
+  color: hsl(245, 75%, 52%);
+  background-color: transparent;
+  border: none;
+}
+
+.button-main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 50px;
+  margin-bottom: 14px;
+  padding: 0;
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 900;
+  color: hsl(225, 100%, 98%);
+  background-color: hsl(245, 75%, 52%);
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 15px 40px -10px hsl(245, 75%, 52%);
+}
+
+.button-secondary {
+  padding: 10px;
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 900;
+  color: hsl(224, 23%, 55%);
+  background-color: transparent;
+  border: none;
+}
+
+.attribution {
+  position: absolute;
+  left: 0;
+  bottom: 10px;
+  width: 100%;
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media (min-width: 460px) {
+  body {
+    background-image: url("../images/pattern-background-desktop.svg");
+  }
+
+  .card__title {
+    font-size: 28px;
+  }
+
+  .card__text {
+    font-size: 16px;
+    line-height: 26px;
+  }
+
+  .card__info {
+    padding: 45px 47.5px 40px;
+  }
+
+  .card__content {
+    margin-bottom: 27px;
+  }
+
+  .small-card {
+    padding: 25px;
+  }
+
+  .small-card__title {
+    font-size: 17px;
+    line-height: 17px;
+  }
+
+  .small-card__price {
+    font-size: 17px;
+    line-height: 34px;
+  }
+
+  .button-main {
+    margin-bottom: 20px;
+  }
+
+  .button-addition {
+    padding-bottom: 8px;
+  }
+}
+
+@media (min-width: 1440px) {
+  button {
+    cursor: pointer;
+  }
+
+  .button-addition:hover {
+    opacity: 0.7;
+    text-decoration: none;
+  }
+
+  .button-main:hover {
+    opacity: 0.7;
+  }
+
+  .button-secondary:hover {
+    color: hsl(223, 47%, 23%);
+  }
+}
