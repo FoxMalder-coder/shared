@@ -1,0 +1,32 @@
+:root {
+  --color-opacity-white: #ecf2f8;
+  --color-light: #cfcfcf;
+  --color-middle: #48556a;
+  --color-dark: #19212e;
+  --color-accent: #7541c8;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+body {
+  margin: 0;
+  font-family: 'Barlow Semi Condensed', sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  background-color: var(--color-opacity-white);
+}
+
+* {
+  box-sizing: border-box;
+}

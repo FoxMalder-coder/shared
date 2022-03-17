@@ -1,0 +1,138 @@
+@keyframes uprise {
+  from {
+    opacity: 0;
+    transform: scale(75%);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(100%);
+  }
+}
+
+.atricle {
+  padding: 25px 30px 32px 32px;
+  border-radius: 10px;
+  background-color: white;
+  box-shadow: 5px 15px 30px -30px var(--color-dark);
+
+  &:last-of-type .article__text {
+    @media (max-width: 768px) {
+      padding-right: 6px;
+      letter-spacing: 0.05px;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    padding-right: 31px;
+    padding-bottom: 28px;
+  }
+}
+
+.article--anim {
+  animation: uprise 0.75s ease-in-out;
+}
+
+.article--middle {
+  @media (min-width: 768px) {
+    grid-column-end: span 2;
+  }
+}
+
+.article--big {
+  grid-column: 1 / -1;
+
+  @media (min-width: 1200px) {
+    grid-area: 1 / -2 / span 2 / -1;
+  }
+}
+
+.article--light-text {
+
+  .author__name,
+  .article__summary {
+    color: white;
+  }
+
+  .author__status,
+  .article__text {
+    color: var(--color-light);
+  }
+}
+
+.article--gray-bg {
+  background-color: var(--color-middle);
+
+  @media (min-width: 1200px) {
+    padding-bottom: 33px;
+
+    .article__summary {
+      margin-bottom: 14px;
+    }
+  }
+}
+
+.article--violet-bg {
+  background-color: var(--color-accent);
+  background-image: url("../images/bg-pattern-quotation.svg");
+  background-position: right 10% top;
+  background-repeat: no-repeat;
+
+  .author__photo {
+    border-color: rgba(255, 255, 255, 0.5);
+  }
+
+  .article__text {
+    @media (max-width: 768px) {
+      padding-right: 15px;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    padding-bottom: 33px;
+    background-position: right 18% top;
+
+    .article__summary {
+      margin-bottom: 14px;
+    }
+  }
+}
+
+.article--dark-bg {
+  background-color: var(--color-dark);
+
+  .author__photo {
+    border-color: var(--color-accent);
+  }
+}
+
+.article__author {
+  margin-bottom: 16px;
+}
+
+.article__summary {
+  margin-bottom: 16px;
+  font-size: 1.55em;
+  font-weight: 500;
+  letter-spacing: 0.125px;
+  color: var(--color-middle);
+
+  &--light {
+    color: white;
+  }
+
+  @media (min-width: 1200px) {
+    margin-bottom: 22px;
+  }
+}
+
+.article__text {
+  margin: 0;
+  line-height: 1.375em;
+  letter-spacing: 0.125px;
+  color: var(--color-middle);
+
+  &--light {
+    color: var(--color-light);
+  }
+}
