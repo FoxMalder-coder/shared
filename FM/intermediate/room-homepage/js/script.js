@@ -51,11 +51,13 @@ const pauseEvents = (evt) => {
   return false;
 };
 
+body.addEventListener('dragover', (evt) => { pauseEvents(evt); });
+body.addEventListener('drop', (evt) => { pauseEvents(evt); });
+
 prevArrow.addEventListener('click', slideBack);
 nextArrow.addEventListener('click', slideForward);
 
 window.addEventListener('wheel', onScroll);
-
 document.addEventListener('keydown', onKeydown);
 
 body.addEventListener('mousedown', (evt) => {
@@ -83,7 +85,6 @@ body.addEventListener('mouseup', (evt) => {
 });
 
 body.addEventListener('touchstart', (evt) => {
-  pauseEvents(evt);
   isActive = true;
   currentX = evt.changedTouches[0].pageX;
 });
@@ -103,5 +104,4 @@ body.addEventListener('touchend', (evt) => {
     slideForward();
   };
   isActive = false;
-  pauseEvents(evt);
 })
