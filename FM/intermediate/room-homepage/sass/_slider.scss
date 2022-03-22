@@ -14,7 +14,8 @@
   }
 
   @media (min-width: 1024px) and (orientation: landscape) {
-    top: calc(535 / 800 * 100vh - 80px);
+    top: calc(535px - 80px);
+    // top: calc(535 / 800 * 100vh - 80px);
     left: calc(840 / 1440 * 100%);
   }
 
@@ -58,7 +59,8 @@
     @media (min-width: 1024px) and (orientation: landscape) {
       display: grid;
       grid-template-columns: repeat(2, calc(420 / 1440 * 100%)) 160px 1fr;
-      height: calc(535 / 800 * 100vh);
+      height: 535px;
+      // height: calc(535 / 800 * 100vh);
     }
   }
 }
@@ -95,9 +97,9 @@
 
   @media (min-width: 1440px) {
     display: grid;
-    grid-template-rows: min-content 1fr 170px;
+    grid-template-rows: min-content 1fr 85px;
     height: 100%;
-    padding: 15vh 12vh 0 12.5vh;
+    padding: 120px 100px 85px;
   }
 }
 

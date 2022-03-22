@@ -29,6 +29,10 @@
   @media (min-width: 768px) {
     grid-template-columns: repeat(2, calc(420 / 1440 * 100%)) 160px 1fr;
   }
+
+  @media (min-width: 1440px) {
+    height: 265px;
+  }
 }
 
 .about__wrapper {
@@ -44,7 +48,8 @@
   }
 
   @media (min-width: 1440px) {
-    padding: 9vh 5vh 4vh 6vh;
+    padding: 70px 45px 35px 48px;
+    // padding: 9vh 5vh 4vh 6vh;
   }
 }
 

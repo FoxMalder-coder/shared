@@ -34,11 +34,3 @@ body {
 img {
   display: block;
 }
-
-main {
-  @media (min-width: 768px) {
-    display: grid;
-    grid-template-rows: min-content 1fr;
-    min-height: 100vh;
-  }
-}
