@@ -1,0 +1,44 @@
+:root {
+  --color-gray: hsl(0, 0%, 63%);
+  --color-dark-gray: hsl(0, 0%, 27%);
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  font-family: 'Spartan', sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--color-gray);
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+img {
+  display: block;
+}
+
+main {
+  @media (min-width: 768px) {
+    display: grid;
+    grid-template-rows: min-content 1fr;
+    min-height: 100vh;
+  }
+}

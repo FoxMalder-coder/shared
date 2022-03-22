@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Frontend Mentor | Room homepage</title>
+</head>
+
+<body>
+  <header class="page-header">
+    <img class="logo" src="images/logo.svg" alt="Logo: room" width="62">
+    <nav class="menu">
+      <div class="menu__overlay"></div>
+      <button class="menu__toggle">
+        <span class="visually-hidden">Open/close menu</span>
+      </button>
+      <ul class="menu__list">
+        <li class="menu__item">
+          <a href="#" class="menu__link">Home</a>
+        </li>
+        <li class="menu__item">
+          <a href="#" class="menu__link">Shop</a>
+        </li>
+        <li class="menu__item">
+          <a href="#" class="menu__link">About</a>
+        </li>
+        <li class="menu__item">
+          <a href="#" class="menu__link">Contact</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1 class="visually-hidden">room - innovate furniture manufacturer</h1>
+    <div class="slider">
+      <div class="slider__arrows">
+        <button class="arrow arrow-prev"></button>
+        <button class="arrow arrow-next"></button>
+      </div>
+
+      <article class="slide slide--active">
+        <img class="slide__img" src="images/desktop-image-hero-1.jpg" alt="Photo: furniture">
+        <div class="slide__content">
+          <h2 class="slide__title">Discover innovative ways to decorate</h2>
+          <p class="slide__text">We provide unmatched quality, comfort, and style for property owners across the country. Our experts combine form and function in bringing your vision to life. Create a room in your own style with our collection and make your property a reflection of you and what you love.</p>
+          <button class="button">Shop now</button>
+        </div>
+      </article>
+
+      <article class="slide">
+        <img class="slide__img" src="images/desktop-image-hero-2.jpg" alt="Photo: furniture">
+        <div class="slide__content">
+          <h2 class="slide__title">We are available all across the globe</h2>
+          <p class="slide__text">With stores all over the world, it's easy for you to find furniture for your home or place of business. Locally, we’re in most major cities throughout the country. Find the branch nearest you using our store locator. Any questions? Don't hesitate to contact us today.</p>
+          <button class="button">Shop now</button>
+        </div>
+      </article>
+
+      <article class="slide">
+        <img class="slide__img" src="images/desktop-image-hero-3.jpg" alt="Photo: furniture">
+        <div class="slide__content">
+          <h2 class="slide__title">Manufactured with the best materials</h2>
+          <p class="slide__text">Our modern furniture store provide a high level of quality. Our company has invested in advanced technology to ensure that every product is made as perfect and as consistent as possible. With three decades of experience in this industry, we understand what customers want for their home and office.</p>
+          <button class="button">Shop now</button>
+        </div>
+      </article>
+    </div>
+
+    <section class="about">
+      <div class="about__wrapper">
+        <h2 class="about__title">About our furniture</h2>
+        <p class="about__text">Our multifunctional collection blends design and function to suit your individual taste. Make each room unique, or pick a cohesive theme that best express your interests and what inspires you. Find the furniture pieces you need, from traditional to contemporary styles or anything in between. Product specialists are available to help you create your dream space.</p>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/script.js"></script>
+</body>
+
+</html>
