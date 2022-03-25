@@ -1,0 +1,96 @@
+:root {
+  --color-gray: hsl(233, 8%, 62%);
+  --color-dark-gray: hsl(233, 26%, 24%);
+  --color-green: hsl(136, 65%, 51%);
+  --color-cyan: hsl(192, 70%, 51%);
+  --color-bg: hsl(220, 14%, 96%);
+  --color-bg-light: hsl(0, 0%, 98%);
+  -color: #2D314D;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+body {
+  min-width: 375px;
+  width: 100%;
+  margin: 0;
+  font-family: 'Public Sans', sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  letter-spacing: -0.25px;
+  color: var(--color-gray);
+  background: var(--color-bg-light) url('../images/bg-intro-mobile.svg') top right / 100% no-repeat;
+
+  @media (min-width: 576px) {
+    background-image: url('../images/bg-intro-desktop.svg');
+    background-position: top 80px right;
+    background-size: contain;
+  }
+
+  @media (min-width: 768px) {
+    background-size: auto 575px;
+  }
+
+  @media (min-width: 1440px) {
+    background-size: auto 660px;
+  }
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+img {
+  display: block;
+}
+
+button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 165px;
+  height: 45px;
+  font-family: inherit;
+  font-weight: 700;
+  letter-spacing: 0.25px;
+  color: white;
+  background: var(--color-cyan) linear-gradient(90deg, var(--color-green), var(--color-cyan), var(--color-green));
+  background-size: 400% 400%;
+  border: none;
+  border-radius: 25px;
+  animation: gradient 10s ease infinite;
+
+  @media (hover: hover) {
+    &:hover {
+      cursor: pointer;
+      filter: saturate(125%);
+    }
+  }
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}

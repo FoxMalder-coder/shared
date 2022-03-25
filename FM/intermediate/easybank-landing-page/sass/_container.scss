@@ -1,0 +1,15 @@
+.container {
+  padding-left: 24px;
+  padding-right: 24px;
+
+  // Ширина поля минус ширина контента, деленная пополам
+  @media (min-width: 768px) {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  @media (min-width: 1440px) {
+    padding-left: calc(50% - 555.5px);
+    padding-right: calc(50% - 555.5px);
+  }
+}

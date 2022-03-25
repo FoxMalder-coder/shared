@@ -1,0 +1,145 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 34px;
+  padding-top: 40px;
+  padding-bottom: 45px;
+  font-size: 16px;
+  text-align: center;
+  color: white;
+  background-color: var(--color-dark-gray);
+
+  @media (min-width: 992px) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+  }
+
+  @media (min-width: 1440px) {
+    padding-top: 48px;
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.footer__logo {
+  color: inherit;
+  color: white;
+
+  @media (min-width: 992px) {
+    place-self: start;
+  }
+}
+
+.social {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+
+  @media (min-width: 992px) {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+    justify-self: start;
+    margin: 0;
+  }
+}
+
+.social__item {}
+
+.social__link {
+  display: block;
+  width: 24px;
+  height: 24px;
+  text-align: center;
+  background-color: white;
+  mask-position: center;
+  mask-size: cover;
+  mask-repeat: no-repeat;
+
+  @media (min-width: 1440px) {
+    width: 20px;
+    height: 20px;
+  }
+
+  @media (hover: hover) {
+    &:hover {
+      cursor: pointer;
+      background-color: var(--color-green);
+    }
+  }
+}
+
+.social__link-fb {
+  mask-image: url("../images/icon-facebook.svg");
+}
+
+.social__link-youtube {
+  mask-image: url("../images/icon-youtube.svg");
+}
+
+.social__link-tw {
+  mask-image: url("../images/icon-twitter.svg");
+}
+
+.social__link-pint {
+  mask-image: url("../images/icon-pinterest.svg");
+}
+
+.social__link-inst {
+  mask-image: url("../images/icon-instagram.svg");
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+
+  @media (min-width: 768px) {
+    width: 288px;
+    height: 90px;
+    text-align: left;
+    flex-wrap: wrap;
+    place-content: space-between;
+  }
+
+  @media (min-width: 992px) {
+    grid-row: span 2;
+  }
+
+  @media (min-width: 1440px) {
+    grid-column: span 2;
+  }
+}
+
+.nav__link {
+  flex-shrink: 0;
+  color: var(--color-bg);
+  text-decoration: none;
+
+  @media (hover: hover) {
+    &:hover {
+      cursor: pointer;
+      color: var(--color-green);
+    }
+  }
+}
+
+.footer__button {
+  @media (min-width: 992px) {
+    justify-self: end;
+  }
+}
+
+.copyright {
+  margin: 0;
+  font-size: 15px;
+  color: var(--color-gray);
+
+  @media (min-width: 992px) {
+    grid-column: -2 / -1;
+    text-align: right;
+  }
+}
