@@ -177,7 +177,7 @@ button {
   display: none;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .toggle-label {
     position: relative;
     z-index: 100;
@@ -224,7 +224,7 @@ button {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .menu__overlay {
     position: fixed;
     top: 0;
@@ -330,7 +330,7 @@ button {
   }
 }
 
-@media (max-width: 992px) {
+@media (max-width: 991px) {
   .header__button {
     display: none;
   }
