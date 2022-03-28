@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.min.css">
+  <title>Ремонт квартир в Краснодаре</title>
+</head>
+
+<body>
+  <header class="header">
+    <img class="header__logo" src="images/logo.png" width="86" height="86" alt="Logo: Ремонт квартир">
+    <p class="header__text">Профессиональный ремонт квартир и&nbsp;домов в&nbsp;Краснодаре. Работаем 5&nbsp;лет.</p>
+    <div class="social">
+      <img class="social__image" src="images/photo1.png" width="60" height="60" alt="-">
+      <p class="social__text">Задайте вопрос напрямую в:</p>
+      <ul class="social__list">
+        <li class="social__item">
+          <a href="#" class="social__link social__link--whatsapp" aria-label="WhatsApp">
+            <img class="social__icon" src="images/icon-WhatsApp.svg" width="20" height="20" alt="Icon: WhatsApp">
+            WhatsApp
+          </a>
+        </li>
+        <li class="social__item">
+          <a href="#" class="social__link social__link--telegram" aria-label="Telegram">
+            <img class="social__icon" src="images/icon-Telegram.svg" width="20" height="20" alt="Icon: Telegram">
+            Telegram
+          </a>
+        </li>
+        <li class="social__item">
+          <a href="#" class="social__link" aria-label="VKontakte">
+            <img class="social__icon" src="images/icon-VK.svg" width="20" height="20" alt="Icon: VKontakte">
+          </a>
+        </li>
+        <li class="social__item">
+          <a href="#" class="social__link" aria-label="Instagram">
+            <img class="social__icon" src="images/icon-Instagram.svg" width="20" height="20" alt="Icon: Instagram">
+          </a>
+        </li>
+      </ul>
+    </div>
+    <!-- /.social -->
+
+    <div class="project">
+      <img src="images/project.png" class="project__image" alt="Image: flat plane" width="200">
+      <a class="project__link link" href="#">Уже есть<br>дизайн-проект</a>
+    </div>
+    <!-- /.project -->
+
+
+    <div class="header__contact contact">
+      <a href="#" class="contact__link link">Перезвонить Вам?</a>
+      <span class="contact__phone">8 111 111 11 11</span>
+      <span class="contact__time">Пн.-Вс. 9:00-21:00</span>
+    </div>
+    <!-- /.contact -->
+
+    <nav class="menu">
+      <button class="toggle">
+        <span class="visually-hidden">Открыть/закрыть меню</span>
+      </button>
+      <ul class="menu__list">
+        <li class="menu__item">
+          <a href="#" class="menu__link link">Галерея</a>
+        </li>
+        <li class="menu__item">
+          <a href="#" class="menu__link link">Прейскурант</a>
+        </li>
+        <li class="menu__item">
+          <a href="#" class="menu__link link">Контакты</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="main">
+    <section class="intro container">
+      <h1 class="visually-hidden">Профессиональный ремонт квартир и домов в Краснодаре</h1>
+      <p class="intro__title title"><b>Сделаем качественный ремонт квартиры</b> с&nbsp;фиксированной стоимостью работ</p>
+      <span class="intro__mark mark mark--small">от 35 дней</span>
+      <div class="intro__features">
+        <ul class="features">
+          <li class="features__item">Помогаем с&nbsp;выбором и&nbsp;покупкой стройматериалов</li>
+          <li class="features__item">Гарантируем соблюдение сроков</li>
+          <li class="features__item">Работаем без&nbsp;предоплаты</li>
+        </ul>
+      </div>
+      <!-- /.intro__features -->
+
+      <picture>
+        <source media="(min-width: 640px)" srcset="images/warranty-banner-vert.png">
+        <img class="warranty" src="images/warranty-banner.png" alt="-">
+      </picture>
+
+      <div class="intro__buttons buttons">
+        <button class="button">
+          <div class="button__text">
+            Рассчитать стоимость ремонта <i>online</i>
+          </div>
+        </button>
+        <a href="#" class="link">Получить консультацию</a>
+      </div>
+      <!-- /.intro__buttons -->
+
+    </section>
+
+    <section class="calc container">
+      <h2 class="visually-hidden">Предварительный рассчет стоимости</h2>
+      <p class="calc__title title"><b>Узнайте предварительную стоимость</b> ремонта в&nbsp;Вашем помещении</p>
+      <span class="calc__mark mark mark--big">Без надоедливых звонков и&nbsp;спама</span>
+      <p class="calc__lead"><b>За 1 минуту</b> укажите параметры и&nbsp;получите несколько вариантов разной стоимости</p>
+
+      <div class="calc__grid">
+        <div class="calc__form">
+          <div class="calc__form-progress">
+            <p class="calc__subtitle">Осталось вопросов <output class="calc__count">6</output> из <output class="calc__count-all">6</output></p>
+            <div class="progress">
+              <div class="progress__back"></div>
+              <div class="progress__current"></div>
+            </div>
+          </div>
+          <!-- /.calc__form-progress -->
+
+          <form action="" class="form">
+            <p class="form__title question">Вопрос 1</p>
+            <div class="form__card">
+              <img class="form__image image1" src="images/empty-image.jpg" alt="-">
+              <input class="radio1" type="radio" name="placement" value="flat" id="radio1">
+              <label class="answer1" for="radio1">Ответ 1</label>
+              <!-- <label for="flat">Квартиру</label> -->
+            </div>
+            <div class="form__card">
+              <img class="form__image image2" src="images/empty-image.jpg" alt="-">
+              <input class="radio2" type="radio" name="placement" value="house" id="radio2">
+              <label class="answer2" for="radio2">Ответ 2</label>
+              <!-- <label for="house">Дом</label> -->
+            </div>
+            <div class="form__buttons buttons">
+              <button class="button form__next">Следующий вопрос</button>
+              <a href="#" class="link form__skip">Пропустить вопрос</a>
+            </div>
+          </form>
+        </div>
+        <!-- /.calc__form -->
+
+        <div class="calc__benefits">
+          <p class="calc__subtitle">Ответьте на 5 вопросов и&nbsp;получите:</p>
+          <p class="calc__benefits-item">Детальную смету в&nbsp;течение 24&nbsp;часов</p>
+          <p class="calc__benefits-item">Cкидку 10% на стройматериалы от&nbsp;наших проверенных поставщиков</p>
+        </div>
+        <!-- /.calc__benefits -->
+
+
+
+        <div class="calc__author">
+          <div class="author">
+            <img class="author__image" src="images/photo2.png" alt="-">
+            <p class="author__name">Расчет проведет Бочкарев Михаил</p>
+          </div>
+        </div>
+        <!-- /.calc__author -->
+
+      </div>
+      <!-- /.calc__grid -->
+    </section>
+  </main>
+
+  <script src="js/script.js"></script>
+
+</body>
+
+</html>
