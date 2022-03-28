@@ -82,3 +82,12 @@ skipBtn.addEventListener('click', (evt) => {
   evt.preventDefault();
   if (countChek()) { makeNext() };
 });
+
+const header = document.querySelector('.header');
+
+if (window.innerWidth <= 640) {
+  window.addEventListener('scroll', (evt) => {
+    window.pageYOffset >= 20 ? header.classList.add('header--fixed') : header.classList.remove('header--fixed');
+  });
+}
+
