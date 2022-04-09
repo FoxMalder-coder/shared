@@ -1,0 +1,54 @@
+.container {
+  padding-inline: 6.4%;
+
+  @media (min-width: 835px) {
+    padding-inline: calc(50% - 365px);
+  }
+}
+
+.titled {
+  color: black;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.colored {
+  font-weight: 500;
+  color: var(--color-cyan);
+}
+
+.rounded {
+  background-color: #fff;
+  border: 1px solid var(--border-color, var(--color-gray-light));
+  border-radius: 1rem;
+}
+
+.disabled {
+  opacity: 0.5;
+}
+
+.digit-letter {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  font-size: 1.5rem;
+}
+
+.digit-letter span {
+  font-size: 3.2rem;
+  font-weight: 700;
+  line-height: 1;
+  color: black;
+}
+
+.overlay {
+  content: "";
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 10;
+  display: none;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(to bottom, var(--color-gray-dark), transparent 100%);
+}

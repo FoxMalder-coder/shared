@@ -1,0 +1,29 @@
+.header {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 42.5%;
+  padding-inline: 6.4%;
+  padding-block: 3.2rem;
+
+  @media (min-width: 640px) {
+    margin-bottom: 19.5rem;
+    padding-block: 3.5rem;
+  }
+
+  @media (min-width: 1205px) {
+    max-width: 1205px;
+    margin-inline: auto;
+    padding-inline: 4.75rem;
+  }
+}
+
+.company-logo {
+  position: relative;
+  z-index: 110;
+  margin-right: auto;
+}
+
+.company-logo img {
+  height: auto;
+}
