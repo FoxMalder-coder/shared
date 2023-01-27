@@ -523,7 +523,7 @@ body {
 
 @media (min-width: 65em) {
     .home-info h1 > span {
-        margin-block: 1.8rem 1.6rem;
+        margin-block: 2.4rem 2.2rem;
         line-height: 1;
     }
 
