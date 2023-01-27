@@ -474,6 +474,11 @@ body {
 }
 
 /* Home page */
+.home-info h1 > span {
+    margin-block: 1.6rem;
+    line-height: 1;
+}
+
 .large-button {
     position: relative;
     z-index: 1;
@@ -484,7 +489,7 @@ body {
     font-family: var(--ff-serif);
     font-size: 2rem;
     text-transform: uppercase;
-    text-decoration-thickness: from-font;
+    text-decoration: none;
     color: hsl(var(--clr-dark));
     background-color: hsl(var(--clr-white));
     aspect-ratio: 1;
@@ -517,6 +522,11 @@ body {
 }
 
 @media (min-width: 65em) {
+    .home-info h1 > span {
+        margin-block: 1.8rem 1.6rem;
+        line-height: 1;
+    }
+
     .large-button {
         min-width: 27.4rem;
     }
