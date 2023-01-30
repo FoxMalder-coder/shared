@@ -15,7 +15,7 @@
 
     <title>Frontend Mentor | Space tourism website</title>
     <link rel="stylesheet" href="style.css">
-    <script src="index.js" defer></script>
+    <script src="index.min.js" defer></script>
 </head>
 
 <body class="destination">
@@ -27,8 +27,8 @@
             <img class="logo" src="assets/shared/logo.svg" alt="space tourism logo">
         </div>
 
-        <button class="mobile-nav-toggle" aria-controls="primary-navigation"><span class="sr-only"
-                aria-expanded="false">Menu</span></button>
+        <button class="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="false"><span
+                class="sr-only">Menu</span></button>
 
         <nav>
             <ul id="primary-navigation" class="primary-navigation underline-indicators flex" data-visible="false">
@@ -37,84 +37,135 @@
                 <li class="active"><a class="text-white ff-sans-condens letter-spacing-2 uppercase"
                         href="destination.html"><span>01</span>Destination</a></li>
                 <li><a class="text-white ff-sans-condens letter-spacing-2 uppercase"
-                        href="crew.html"><span>02</span>Crew</a>
-                </li>
+                        href="crew.html"><span>02</span>Crew</a></li>
                 <li><a class="text-white ff-sans-condens letter-spacing-2 uppercase"
                         href="technology.html"><span>03</span>Technology</a></li>
             </ul>
         </nav>
     </header>
 
-    <main id="#main" class="grid-destination grid container">
-        <h1 class="numbered-title"><span>01</span>Pick your destination</h1>
+    <main id="#main" class="grid-destination g-base">
+        <h1 class="g-title numbered-title"><span>01</span>Pick your destination</h1>
 
-        <picture class="destination-img">
-            <source srcset="/assets/destination/image-moon.webp" type="image/webp">
-            <img src="/assets/destination/image-moon.png" alt="Moon planet">
+        <!-- Planets images -->
+        <picture id="moon-image" class="g-image destination-img">
+            <source srcset="./assets/destination/image-moon.webp" type="image/webp">
+            <img src="./assets/destination/image-moon.png" alt="Moon planet">
         </picture>
 
-        <div class="destination-tabs tab-list underline-indicators flex">
-            <button aria-selected="true" class="ff-sans-condens text-light uppercase letter-spacing-2">Moon</button>
-            <button aria-selected="false" class="ff-sans-condens text-light uppercase letter-spacing-2">Mars</button>
-            <button aria-selected="false" class="ff-sans-condens text-light uppercase letter-spacing-2">Europa</button>
-            <button aria-selected="false" class="ff-sans-condens text-light uppercase letter-spacing-2">Titan</button>
+        <picture id="mars-image" class="g-image destination-img" hidden>
+            <source srcset="./assets/destination/image-mars.webp" type="image/webp">
+            <img src="./assets/destination/image-mars.png" alt="Mars planet">
+        </picture>
+
+        <picture id="europa-image" class="g-image destination-img" hidden>
+            <source srcset="./assets/destination/image-europa.webp" type="image/webp">
+            <img src="./assets/destination/image-europa.png" alt="Europa planet">
+        </picture>
+
+        <picture id="titan-image" class="g-image destination-img" hidden>
+            <source srcset="./assets/destination/image-titan.webp" type="image/webp">
+            <img src="./assets/destination/image-titan.png" alt="Titan planet">
+        </picture>
+
+        <div class="g-tabs destination-tabs tab-list underline-indicators flex" aria-label="destination list"
+            role="tablist">
+            <button class="ff-sans-condens text-light uppercase letter-spacing-2" role="tab" aria-controls="moon-tab"
+                aria-selected="true" data-image="moon-image" tabindex="0">Moon</button>
+            <button class="ff-sans-condens text-light uppercase letter-spacing-2" role="tab" aria-controls="mars-tab"
+                aria-selected="false" data-image="mars-image" tabindex="-1">Mars</button>
+            <button class="ff-sans-condens text-light uppercase letter-spacing-2" role="tab" aria-controls="europa-tab"
+                aria-selected="false" data-image="europa-image" tabindex="-1">Europa</button>
+            <button class="ff-sans-condens text-light uppercase letter-spacing-2" role="tab" aria-controls="titan-tab"
+                aria-selected="false" data-image="titan-image" tabindex="-1">Titan</button>
         </div>
 
-        <div class="destination-info">
-            <h2 class="ff-serif fs-800 uppercase">Moon</h2>
-            <p class="text-light">See our planet as you’ve never seen it before. A perfect relaxing trip away to help
-                regain perspective and come back refreshed. While you’re there, take in some history
-                by visiting the Luna 2 and Apollo 11 landing sites.</p>
+        <!-- Moon -->
+        <div id="moon-tab" class="g-text" role="tabpanel" tabindex="0">
+            <div class="destination-info">
+                <h2 class="ff-serif fs-800 uppercase">Moon</h2>
+                <p class="text-light">See our planet as you’ve never seen it before. A perfect relaxing trip away to
+                    help regain perspective and come back refreshed. While you’re there, take in some history by
+                    visiting the Luna 2 and Apollo 11 landing sites.</p>
+            </div>
+
+            <dl class="destination-meta grid">
+                <div>
+                    <dt class="text-light fs-200 ff-sans-condens letter-spacing-1 uppercase">Avg. distance</dt>
+                    <dd class="ff-serif fs-500 uppercase">384,400 km</dd>
+                </div>
+                <div>
+                    <dt class="text-light fs-200 ff-sans-condens letter-spacing-1 uppercase">Est. travel time</dt>
+                    <dd class="ff-serif fs-500 uppercase">3 days</dd>
+                </div>
+            </dl>
         </div>
 
-        <dl class="destination-meta grid">
-            <div>
-                <dt class="text-light fs-200 ff-sans-condens letter-spacing-1 uppercase">Avg. distance</dt>
-                <dd class="ff-serif fs-500 uppercase">384,400 km</dd>
+        <!-- Mars -->
+        <div id="mars-tab" class="g-text" role="tabpanel" tabindex="0" hidden>
+            <div class="destination-info">
+                <h2 class="ff-serif fs-800 uppercase">Mars</h2>
+                <p class="text-light">Don’t forget to pack your hiking boots. You’ll need them to tackle Olympus
+                    Mons,
+                    the tallest planetary mountain in our solar system. It’s two and a half times the size of
+                    Everest!</p>
             </div>
-            <div>
-                <dt class="text-light fs-200 ff-sans-condens letter-spacing-1 uppercase">Est. travel time</dt>
-                <dd class="ff-serif fs-500 uppercase">3 days</dd>
+
+            <dl class="destination-meta grid">
+                <div>
+                    <dt class="text-light fs-200 ff-sans-condens letter-spacing-1 uppercase">Avg. distance</dt>
+                    <dd class="ff-serif fs-500 uppercase">225 mil. km</dd>
+                </div>
+                <div>
+                    <dt class="text-light fs-200 ff-sans-condens letter-spacing-1 uppercase">Est. travel time
+                    </dt>
+                    <dd class="ff-serif fs-500 uppercase">9 months</dd>
+                </div>
+            </dl>
+        </div>
+
+        <!-- Europa -->
+        <div id="europa-tab" class="g-text" role="tabpanel" tabindex="0" hidden>
+            <div class="destination-info">
+                <h2 class="ff-serif fs-800 uppercase">Europa</h2>
+                <p class="text-light">The smallest of the four Galilean moons orbiting Jupiter, Europa is a winter
+                    lover’s dream. With an icy surface, it’s perfect for a bit of ice skating, curling, hockey, or
+                    simple relaxation in your snug wintery cabin.</p>
             </div>
-        </dl>
 
-        <div class="sr-only">
-            Mars
+            <dl class="destination-meta grid">
+                <div>
+                    <dt class="text-light fs-200 ff-sans-condens letter-spacing-1 uppercase">Avg. distance</dt>
+                    <dd class="ff-serif fs-500 uppercase">628 mil. km</dd>
+                </div>
+                <div>
+                    <dt class="text-light fs-200 ff-sans-condens letter-spacing-1 uppercase">Est. travel time
+                    </dt>
+                    <dd class="ff-serif fs-500 uppercase">3 years</dd>
+                </div>
+            </dl>
+        </div>
 
-            Don’t forget to pack your hiking boots. You’ll need them to tackle Olympus Mons,
-            the tallest planetary mountain in our solar system. It’s two and a half times
-            the size of Everest!
+        <!-- Titan -->
+        <div id="titan-tab" class="g-text" role="tabpanel" tabindex="0" hidden>
+            <div class="destination-info">
+                <h2 class="ff-serif fs-800 uppercase">Titan</h2>
+                <p class="text-light">The only moon known to have a dense atmosphere other than Earth, Titan is a
+                    home away from home (just a few hundred degrees colder!). As a bonus, you get striking views of
+                    the Rings of Saturn.</p>
+            </div>
 
-            Avg. distance
-            225 mil. km
-
-            Est. travel time
-            9 months
-
-            Europa
-
-            The smallest of the four Galilean moons orbiting Jupiter, Europa is a
-            winter lover’s dream. With an icy surface, it’s perfect for a bit of
-            ice skating, curling, hockey, or simple relaxation in your snug
-            wintery cabin.
-
-            Avg. distance
-            628 mil. km
-
-            Est. travel time
-            3 years
-
-            Titan
-
-            The only moon known to have a dense atmosphere other than Earth, Titan
-            is a home away from home (just a few hundred degrees colder!). As a
-            bonus, you get striking views of the Rings of Saturn.
-
-            Avg. distance
-            1.6 bil. km
-
-            Est. travel time
-            7 years
+            <dl class="destination-meta grid">
+                <div>
+                    <dt class="text-light fs-200 ff-sans-condens letter-spacing-1 uppercase">Avg. distance</dt>
+                    <dd class="ff-serif fs-500 uppercase">1.6 bil. km</dd>
+                </div>
+                <div>
+                    <dt class="text-light fs-200 ff-sans-condens letter-spacing-1 uppercase">Est. travel time
+                    </dt>
+                    <dd class="ff-serif fs-500 uppercase">7 years</dd>
+                </div>
+            </dl>
         </div>
     </main>
 </body>
