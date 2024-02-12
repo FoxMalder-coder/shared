@@ -1,2 +1,2 @@
 # shared
-Study anf challenges projects
+Study and challenges projects
