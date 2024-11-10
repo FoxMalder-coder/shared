@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <title>Frontend Mentor | IP Address Tracker</title>
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+  <main>
+    <h1 class="header">IP Address Tracker</h1>
+    <form id="form" action="" class="search">
+      <input type="text" class="search__input" placeholder="Search for any IP address or domain">
+      <button class="search__button" type="submit">
+        <img src="images/icon-arrow.svg" alt="">
+      </button>
+    </form>
+
+    <div class="info">
+      <div class="info__item">
+        <span class="info__title">IP Address</span>
+        <span id="ip" class="info__text">192.212.174.101</span>
+      </div>
+      <div class="info__item">
+        <span class="info__title">Location</span>
+        <span id="location" class="info__text">Brooklyn, NY 10001</span>
+      </div>
+      <div class="info__item">
+        <span class="info__title">Timezone</span>
+        <span id="timezone" class="info__text">UTC -05:00</span>
+      </div>
+      <div class="info__item">
+        <span class="info__title">ISP</span>
+        <span id="isp" class="info__text">SpaceX Starlink</span>
+      </div>
+    </div>
+  </main>
+
+  <div class="background">
+    <picture>
+      <source media="(min-width: 1200px)" srcset="images/pattern-bg-desktop.png">
+      <source media="(min-width: 576px)" srcset="images/pattern-bg-tablet.png">
+      <img src="images/pattern-bg-mobile.png" alt="">
+    </picture>
+    <div id="map"></div>
+  </div>
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="https://www.frontendmentor.io/profile/FoxMalder-coder">Irina Lagutina</a>.
+  </div>
+</body>
+
+<script type="module" src="script.js"></script>
+
+</html>
