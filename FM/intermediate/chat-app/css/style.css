@@ -333,4 +333,18 @@ form button {
 }
 form button img {
   width: 8px;
+}
+
+@keyframes move {
+  0% {
+    transform: translate3d(-25vw, -25vw, -25vw);
+    opacity: 0;
+  }
+  50% {
+    transform: rotateX(25deg);
+  }
+}
+.animation {
+  transform-style: preserve-3d;
+  animation: move 1s linear;
 }/*# sourceMappingURL=style.css.map */
