@@ -1,0 +1,97 @@
+:root {
+// Background
+  --color-light-grayish-cyan: hsl(180, 52%, 96%);
+// Filter Tablets
+  --color-grayish-cyan: hsl(180, 31%, 95%);
+  --color-dark-grayish-cyan: hsl(180, 8%, 52%);
+  --color-very-dark-grayish-cyan: hsl(180, 14%, 20%);
+  --color-dark-cyan: hsl(180, 29%, 50%);
+}
+
+$width-tablet: 576px;
+$width-desktop: 900px;
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+}
+
+html {
+  height: 100%;
+  font-size: 62.5%;
+  background-color: var(--color-light-grayish-cyan);
+}
+
+body {
+  position: relative;
+  min-width: 375px;
+  min-height: 100%;
+  margin: 0;
+  font-family: "League Spartan", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--color-dark-cyan);
+  border: 1px solid transparent;
+
+  &::before {
+    position: absolute;
+    z-index: -1;
+    content: "";
+    display: block;
+    width: 100%;
+    height: 15.5rem;
+    background: var(--color-dark-cyan) url("/images/bg-header-mobile.svg") center / cover no-repeat;
+
+    @media (min-width: $width-tablet) {
+      background-image: url("/images/bg-header-desktop.svg");
+    }
+  }
+
+  @media (min-width: $width-desktop) {
+    font-size: 1.8rem;
+  }
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+h1, h2, p {
+  margin: 0;
+  padding: 0;
+}
+
+ul, li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+button {
+  font-family: inherit;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  border-radius: 4px;
+}
+
+.container {
+  padding-inline: max(6.4vw, calc(50% - 555px));
+}

@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+    rel="stylesheet">
+
+  <title>Frontend Mentor | Job Listings</title>
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+  <h1 class="sr-only">IT-developers job listings</h1>
+
+  <header class="container">
+    <div class="filter" hidden>
+      <button type="reset" class="clear-all-filter">Clear</button>
+    </div>
+  </header>
+
+  <ul class="list container">
+
+    <!-- Item Start -->
+    <li class="item item--featured">
+      <img src="images/photosnap.svg" alt="Photosnap logo" class="logo">
+      <div class="header">
+        <span class="company">Photosnap</span>
+        <span class="sign">New!</span>
+        <span class="sign sign--dark">Featured</span>
+      </div>
+      <h2 class="title">Senior Frontend Developer</h2>
+      <div class="info">
+        <span>1d ago</span>
+        <span>Full Time</span>
+        <span>USA only</span>
+      </div>
+
+      <div class="tags">
+        <button class="tag" data-role="Frontend">Frontend</button>
+        <button class="tag" data-level="Senior">Senior</button>
+        <button class="tag" data-languages="HTML">HTML</button>
+        <button class="tag" data-languages="CSS">CSS</button>
+        <button class="tag" data-languages="Javascript">JavaScript</button>
+      </div>
+    </li>
+    <!-- Item End -->
+
+    <!-- Item Start -->
+    <li class="item item--featured">
+      <img src="images/manage.svg" alt="Manage logo" class="logo">
+      <div class="header">
+        <span class="company">Manage</span>
+        <span class="sign">New!</span>
+        <span class="sign sign--dark">Featured</span>
+      </div>
+      <h2 class="title">Fullstack Developer</h2>
+      <div class="info">
+        <span>1d ago</span>
+        <span>Part Time</span>
+        <span>Remote</span>
+      </div>
+
+      <div class="tags">
+        <button class="tag" data-role="Fullstack">Fullstack</button>
+        <button class="tag" data-level="Midweight">Midweight</button>
+        <button class="tag" data-languages="Python">Python</button>
+        <button class="tag" data-tools="React">React</button>
+      </div>
+    </li>
+    <!-- Item End -->
+
+    <!-- Item Start -->
+    <li class="item">
+      <img src="images/account.svg" alt="Account logo" class="logo">
+      <div class="header">
+        <span class="company">Account</span>
+        <span class="sign">New!</span>
+      </div>
+      <h2 class="title">Junior Frontend Developer</h2>
+      <div class="info">
+        <span>2d ago</span>
+        <span>Part Time</span>
+        <span>USA only</span>
+      </div>
+
+      <div class="tags">
+        <button class="tag" data-role="Frontend">Frontend</button>
+        <button class="tag" data-level="Junior">Junior</button>
+        <button class="tag" data-languages="Javascript">JavaScript</button>
+        <button class="tag" data-tools="React">React</button>
+        <button class="tag" data-tools="Sass">Sass</button>
+      </div>
+    </li>
+    <!-- Item End -->
+
+    <!-- Item Start -->
+    <li class="item">
+      <img src="images/myhome.svg" alt="MyHome logo" class="logo">
+      <div class="header">
+        <span class="company">MyHome</span>
+      </div>
+      <h2 class="title">Junior Frontend Developer</h2>
+      <div class="info">
+        <span>5d ago</span>
+        <span>Contract</span>
+        <span>USA only</span>
+      </div>
+
+      <div class="tags">
+        <button class="tag" data-role="Frontend">Frontend</button>
+        <button class="tag" data-level="Junior">Junior</button>
+        <button class="tag" data-languages="CSS">CSS</button>
+        <button class="tag" data-languages="Javascript">JavaScript</button>
+      </div>
+    </li>
+    <!-- Item End -->
+
+    <!-- Item Start -->
+    <li class="item">
+      <img src="images/loop-studios.svg" alt="Loop Studios logo" class="logo">
+      <div class="header">
+        <span class="company">Loop Studios</span>
+      </div>
+      <h2 class="title">Software Engineer</h2>
+      <div class="info">
+        <span>1w ago</span>
+        <span>Full Time</span>
+        <span>Worldwide</span>
+      </div>
+
+      <div class="tags">
+        <button class="tag" data-role="Fullstack">Fullstack</button>
+        <button class="tag" data-level="Midweight">Midweight</button>
+        <button class="tag" data-languages="Javascript">JavaScript</button>
+        <button class="tag" data-languages="Ruby">Ruby</button>
+        <button class="tag" data-tools="Sass">Sass</button>
+      </div>
+    </li>
+    <!-- Item End -->
+
+    <!-- Item Start -->
+    <li class="item">
+      <img src="images/faceit.svg" alt="FaceIt logo" class="logo">
+      <div class="header">
+        <span class="company">FaceIt</span>
+      </div>
+      <h2 class="title">Junior Backend Developer</h2>
+      <div class="info">
+        <span>2w ago</span>
+        <span>Full Time</span>
+        <span>UK only</span>
+      </div>
+
+      <div class="tags">
+        <button class="tag" data-role="backend">Backend</button>
+        <button class="tag" data-level="Junior">Junior</button>
+        <button class="tag" data-languages="Ruby">Ruby</button>
+        <button class="tag" data-tools="RoR">RoR</button>
+      </div>
+    </li>
+    <!-- Item End -->
+
+    <!-- Item Start -->
+    <li class="item">
+      <img src="images/shortly.svg" alt="Shortly logo" class="logo">
+      <div class="header">
+        <span class="company">Shortly</span>
+      </div>
+      <h2 class="title">Junior Developer</h2>
+      <div class="info">
+        <span>2w ago</span>
+        <span>Full Time</span>
+        <span>Worldwide</span>
+      </div>
+
+      <div class="tags">
+        <button class="tag" data-role="Frontend">Frontend</button>
+        <button class="tag" data-level="Junior">Junior</button>
+        <button class="tag" data-languages="HTML">HTML</button>
+        <button class="tag" data-languages="Javascript">JavaScript</button>
+        <button class="tag" data-tools="Sass">Sass</button>
+      </div>
+    </li>
+    <!-- Item End -->
+
+    <!-- Item Start -->
+    <li class="item">
+      <img src="images/insure.svg" alt="Insure logo" class="logo">
+      <div class="header">
+        <span class="company">Insure</span>
+      </div>
+      <h2 class="title">Junior Frontend Developer</h2>
+      <div class="info">
+        <span>2w ago</span>
+        <span>Full Time</span>
+        <span>USA only</span>
+      </div>
+
+      <div class="tags">
+        <button class="tag" data-role="Frontend">Frontend</button>
+        <button class="tag" data-level="Junior">Junior</button>
+        <button class="tag" data-languages="Javascript">JavaScript</button>
+        <button class="tag" data-tools="Sass">Sass</button>
+        <button class="tag" data-tools="Vue">Vue</button>
+      </div>
+    </li>
+    <!-- Item End -->
+
+    <!-- Item Start -->
+    <li class="item">
+      <img src="images/eyecam-co.svg" alt="Eyecam Co. logo" class="logo">
+      <div class="header">
+        <span class="company">Eyecam Co.</span>
+      </div>
+      <h2 class="title">Full Stack Engineer</h2>
+      <div class="info">
+        <span>3w ago</span>
+        <span>Full Time</span>
+        <span>Worldwide</span>
+      </div>
+
+      <div class="tags">
+        <button class="tag" data-role="Fullstack">Fullstack</button>
+        <button class="tag" data-level="Midweight">Midweight</button>
+        <button class="tag" data-languages="Javascript">JavaScript</button>
+        <button class="tag" data-languages="Python">Python</button>
+        <button class="tag" data-tools="Django">Django</button>
+      </div>
+    </li>
+    <!-- Item End -->
+
+    <!-- Item Start -->
+    <li class="item">
+      <img src="images/the-air-filter-company.svg" alt="The Air Filter Company logo" class="logo">
+      <div class="header">
+        <span class="company">The Air Filter Company</span>
+      </div>
+      <h2 class="title">Front-end Dev</h2>
+      <div class="info">
+        <span>3mo ago</span>
+        <span>Part Time</span>
+        <span>Worldwide</span>
+      </div>
+
+      <div class="tags">
+        <button class="tag" data-role="Frontend">Frontend</button>
+        <button class="tag" data-level="Junior">Junior</button>
+        <button class="tag" data-languages="Javascript">JavaScript</button>
+        <button class="tag" data-tools="React">React</button>
+        <button class="tag" data-tools="Sass">Sass</button>
+      </div>
+    </li>
+    <!-- Item End -->
+
+  </ul>
+
+  <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="https://www.frontendmentor.io/profile/FoxMalder-coder">Irina Lagutina</a>.
+  </footer>
+
+  <template id="btn">
+    <button class="filter-item">
+      <span></span>
+      <img class="filter-reset-img" src="images/icon-remove.svg" alt="X sign">
+    </button>
+  </template>
+
+  <script type="module" src="js/script.js"></script>
+</body>
+
+</html>
