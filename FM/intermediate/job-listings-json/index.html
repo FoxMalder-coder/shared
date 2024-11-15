@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+    rel="stylesheet">
+
+  <title>Frontend Mentor | Job Listings</title>
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+  <header class="container">
+    <div class="filter" hidden>
+      <button type="reset" class="clear-all-filter">Clear</button>
+    </div>
+  </header>
+
+  <main>
+    <h1 class="sr-only">IT-developers job listings</h1>
+    <ul class="list container"></ul>
+
+
+    <footer class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="https://www.frontendmentor.io/profile/FoxMalder-coder">Irina Lagutina</a>.
+    </footer>
+
+    <template id="btn">
+      <button class="filter-item">
+        <span></span>
+        <img class="filter-reset-img" src="images/icon-remove.svg" alt="X sign">
+      </button>
+    </template>
+
+    <script type="module" src="js/script.js"></script>
+</body>
+
+</html>
